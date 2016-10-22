@@ -60,5 +60,16 @@ dialog.matches('BuyProduct', [
 
 ]);
 
+dialog.matches('FindDeliveryCities', [
+    function (session) {
+        session.send("You are looking to find if an item can be delivered to a city.");
+    }
+]);
+
+dialog.matches('OrderStatus', [
+    function (session) {
+        session.send("You are looking to find order status.");
+    }
+]);
 
 dialog.onDefault(builder.DialogAction.send("ok. I'm sorry. I didn't understand."));
