@@ -4,7 +4,7 @@ var restify = require('restify');
 var builder = require('botbuilder');
 
 
-var connector = new builder.ChatConnector({ appId: '40f38fc4-11d0-49ac-b1ef-79ae7af5cdd8', appPassword: 'f7NgFd6sWxkE2AgZM24MKbt' }); ;
+var connector = new builder.ChatConnector({ appId: '40f38fc4-11d0-49ac-b1ef-79ae7af5cdd8', appPassword: 'f7NgFd6sWxkE2AgZM24MKbt' });
 
 var bot = new builder.UniversalBot(connector);
 
