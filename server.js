@@ -4,7 +4,7 @@ var restify = require('restify');
 var builder = require('botbuilder');
 
 
-var connector = new builder.ChatConnector({ appId: '40f38fc4-11d0-49ac-b1ef-79ae7af5cdd8', appPassword: 'f7NgFd6sWxkE2AgZM24MKbt' });
+var connector = new builder.ChatConnector({ appId: '<your app id>', appPassword: '<your app password>' });
 
 var bot = new builder.UniversalBot(connector);
 
@@ -17,7 +17,7 @@ server.post('/api/messages', connector.listen());
 
 
 // Create LUIS recognizer that points at our model and add it as the root '/' dialog 
-var model = 'https://api.projectoxford.ai/luis/v1/application?id=d6e993f5-038d-42b5-be10-19f115c3cee9&subscription-key=816c738a23314c97bd3cd34f14c1f62f';
+var model = '<Enter your url for the LUIS endpoint>';
 var recognizer = new builder.LuisRecognizer(model);
 var dialog = new builder.IntentDialog({ recognizers: [recognizer] });
 bot.dialog('/', dialog);
