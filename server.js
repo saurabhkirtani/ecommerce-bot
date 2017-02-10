@@ -16,7 +16,7 @@ server.post('/api/messages', connector.listen());
 
 
 // Create LUIS recognizer that points at our model and add it as the root '/' dialog 
-var model = 'https://api.projectoxford.ai/luis/v1/application?id=d6e993f5-038d-42b5-be10-19f115c3cee9&subscription-key=816c738a23314c97bd3cd34f14c1f62f';
+var model = 'https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/d6e993f5-038d-42b5-be10-19f115c3cee9?subscription-key=816c738a23314c97bd3cd34f14c1f62f&verbose=true';
 
 var recognizer = new builder.LuisRecognizer(model);
 var dialog = new builder.IntentDialog({ recognizers: [recognizer] });
